@@ -34,6 +34,7 @@ dependencies {
     implementation "javax.servlet:jstl:$jstlVersion"
     implementation "org.springframework:spring-webmvc:$springVersion"
     implementation "org.webjars:bootstrap:$bootstrapVersion"
+    implementation "org.webjars:webjars-locator:$webjarsLocatorVersion"
     testImplementation "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
     testImplementation "org.springframework:spring-test:$springVersion"
     testImplementation "org.hamcrest:hamcrest-core:$hamcrestVersion"
