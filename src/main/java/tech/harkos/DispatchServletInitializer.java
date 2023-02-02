@@ -1,7 +1,7 @@
-package cu.rlabaut.web.servlet;
+package tech.harkos;
 
-import cu.rlabaut.web.config.SpringWebConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+import tech.harkos.config.SpringWebConfig;
 
 public class DispatchServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
