@@ -12,32 +12,23 @@ apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'idea'
 
-ext {
-    servletVersion = '4.0.1'
-    jstlVersion = '1.2'
-    bootstrapVersion = '5.3'
-    junitVersion = '5.9.0'
-    springVersion = '5.3.25'
-    hamcrestVersion = '2.2'
-}
-
-// JDK 13
-sourceCompatibility = 13
-targetCompatibility = 13
+group 'tech.harkos'
+version '1.0-SNAPSHOT'
 
 repositories {
+    // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
 
 dependencies {
-    compileOnly "javax.servlet:javax.servlet-api:$servletVersion"
-    implementation "javax.servlet:jstl:$jstlVersion"
-    implementation "org.springframework:spring-webmvc:$springVersion"
-    implementation "org.webjars:bootstrap:$bootstrapVersion"
-    implementation "org.webjars:webjars-locator:$webjarsLocatorVersion"
-    testImplementation "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
-    testImplementation "org.springframework:spring-test:$springVersion"
-    testImplementation "org.hamcrest:hamcrest-core:$hamcrestVersion"
+    compileOnly "javax.servlet:javax.servlet-api:4.0.1"
+    implementation "javax.servlet:jstl:1.2"
+    implementation "org.springframework:spring-webmvc:5.3.25"
+    implementation "org.webjars:bootstrap:5.2.3"
+    implementation "org.slf4j:slf4j-simple:1.7.36"
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+    testImplementation "org.springframework:spring-test:5.3.25"
+    testImplementation "org.hamcrest:hamcrest-core:2.2"
 }
 
 gretty {
@@ -47,5 +38,6 @@ gretty {
 }
 
 test {
+    // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
