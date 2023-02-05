@@ -6,7 +6,7 @@
  */
 
 plugins {
-    id 'org.gretty' version '3.0.9'
+    id "org.gretty" version "3.0.9"
 }
 apply plugin: 'java'
 apply plugin: 'war'

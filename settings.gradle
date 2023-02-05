@@ -8,3 +8,4 @@
  */
 
 rootProject.name = 'spring-mvc-jsp-gradle'
+include 'app-web'
